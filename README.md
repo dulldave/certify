@@ -9,7 +9,7 @@ It simply pings the given host, pulls down the certificate and checks how far aw
 
 If the expiration is within the provided parameters a notification will be sent via Slack.
 
-#### How to run:g
+#### How to run:
 ```
 certify -host google.com -day 30 -slack-api-key your-api-key-here -slack-channel slack-channel-name
 ```
