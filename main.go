@@ -32,6 +32,7 @@ func main() {
 		conn, err := tls.Dial("tcp", *host+":443", nil)
 		if err != nil {
 			logrus.WithFields(logrus.Fields{"Error": "Failed to connect to host"}).Error(err)
+			continue
 		}
 
 		// Iterate over the chains and gather the certifcate data.
@@ -43,7 +44,10 @@ func main() {
 					message := fmt.Sprintf("SSL/TLS Certificate Warning: %s. Expiration: %s.", cert.Subject.CommonName, cert.NotAfter)
 
 					// Log the message to stdout
-					logrus.Info(message)
+					logrus.WithFields(logrus.Fields{
+						"Cert Name":  cert.Subject.CommonName,
+						"Expiration": cert.NotAfter,
+					}).Info(message)
 
 					if _, _, err := api.PostMessage(*slackChan, message, params); err != nil {
 						logrus.WithFields(logrus.Fields{

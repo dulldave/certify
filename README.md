@@ -7,7 +7,7 @@ Certify is a bog-standard, simple, SSL/TLS certificate checker. It sprung up aft
 
 It simply pings the given host, pulls down the certificate and checks how far away from the expiration date the certificate is.
 
-If the expiration is within the provided parameters a notification will sent via Slack.
+If the expiration is within the provided parameters a notification will be sent via Slack.
 
 #### How to run:g
 ```
