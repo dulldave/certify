@@ -1,0 +1,24 @@
+{
+	"ImportPath": "github.com/dulldave/certify",
+	"GoVersion": "go1.6",
+	"Deps": [
+		{
+			"ImportPath": "github.com/Sirupsen/logrus",
+			"Comment": "v0.8.7-53-g446d1c1",
+			"Rev": "446d1c146faa8ed3f4218f056fcd165f6bcfda81"
+		},
+		{
+			"ImportPath": "github.com/nlopes/slack",
+			"Comment": "v0.0.1-106-g67c6939",
+			"Rev": "67c6939dd382a85ccbbe2f2e133fd245fe424098"
+		},
+		{
+			"ImportPath": "golang.org/x/net/websocket",
+			"Rev": "c92cdcb05f66ce5b61460e23498d2dc5fcf69aaf"
+		},
+		{
+			"ImportPath": "golang.org/x/sys/unix",
+			"Rev": "442cd600860ce722f6615730eb008a37a87b13ee"
+		}
+	]
+}
